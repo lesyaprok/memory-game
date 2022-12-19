@@ -1,0 +1,18 @@
+export const imagesData = [
+  { id: 1, animal: 'cat', img: 'cat.png' },
+  { id: 2, animal: 'cat', img: 'cat.png' },
+  { id: 3, animal: 'dog', img: 'dog.png' },
+  { id: 4, animal: 'dog', img: 'dog.png' },
+  { id: 5, animal: 'elephant', img: 'elephant.png' },
+  { id: 6, animal: 'elephant', img: 'elephant.png' },
+  { id: 7, animal: 'frog', img: 'frog.png' },
+  { id: 8, animal: 'frog', img: 'frog.png' },
+  { id: 9, animal: 'panda', img: 'panda.png' },
+  { id: 10, animal: 'panda', img: 'panda.png' },
+  { id: 11, animal: 'owl', img: 'owl.png' },
+  { id: 12, animal: 'owl', img: 'owl.png' },
+  { id: 13, animal: 'giraffe', img: 'giraffe.png' },
+  { id: 14, animal: 'giraffe', img: 'giraffe.png' },
+  { id: 15, animal: 'rabbit', img: 'rabbit.png' },
+  { id: 16, animal: 'rabbit', img: 'rabbit.png' },
+];

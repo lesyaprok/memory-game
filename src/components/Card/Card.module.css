@@ -1,0 +1,26 @@
+.card {
+  @apply relative flex justify-center items-center p-2 w-16 h-16 xxs:w-20 xxs:h-20 xs:w-24 xs:h-24 sm:w-32 sm:h-32 md:w-32 md:h-32 lg:w-32 lg:h-32 bg-white cursor-pointer rounded-md overflow-hidden;
+  transform: rotateY(-180deg);
+  transition: 0.7s ease;
+}
+
+.card:hover {
+  transform: rotateY(0deg);
+}
+
+.img {
+  @apply max-w-full max-h-full;
+}
+
+.back {
+  @apply absolute w-full h-full;
+  background: url("../../images/cover.jpeg");
+  background-position: center;
+  visibility: visible;
+  transition: all 0.3s ease-in-out 0s;
+  backface-visibility: hidden;
+}
+
+.back:hover {
+  visibility: hidden;
+}
