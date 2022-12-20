@@ -1,0 +1,4 @@
+.board {
+  @apply grid grid-cols-4 grid-rows-4 gap-1 sm:gap-2;
+  perspective: 700px;
+}
