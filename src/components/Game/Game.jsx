@@ -3,6 +3,9 @@ import Board from '../Board/Board';
 import Rounds from '../Rounds/Rounds';
 import { randomSort } from '../../utils/utils';
 import { imagesData } from './imagesData';
+import Modal from '../../ui/Modal/Modal';
+
+const sortedCards = randomSort(imagesData);
 
 const Game = () => {
   const [cards, setCards] = useState([]);
@@ -11,7 +14,7 @@ const Game = () => {
   const [matches, setMatches] = useState(0);
 
   useEffect(() => {
-    setCards(randomSort(imagesData));
+    setCards(sortedCards);
   }, []);
 
   const setIsOpenToFalse = (prevValue, currentValue) => {
@@ -51,10 +54,18 @@ const Game = () => {
     setPrevCardValue('');
     setTimeout(() => setRounds(rounds + 1), 1000);
   };
+
+  const restartGame = () => {
+    setMatches(0);
+    setCards(randomSort(sortedCards));
+    setRounds(1);
+  };
+
   return (
     <div>
       <Rounds rounds={rounds} />
       <Board cards={cards} onClick={handleClick} />
+      {matches === 8 && <Modal onClick={restartGame} />}
     </div>
   );
 };
