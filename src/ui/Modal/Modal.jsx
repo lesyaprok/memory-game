@@ -8,7 +8,7 @@ const Modal = ({ onClick }) => {
         <p className={styles.title}>Congratulations!</p>
         <button
           type="button"
-          className={styles.button}
+          className={`${styles.button} bg-slate-900`}
           onClick={() => onClick()}
         >
           Play again
