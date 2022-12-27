@@ -1,17 +1,22 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
+import { CSSTransition } from 'react-transition-group';
 import Board from '../Board/Board';
 import Rounds from '../Rounds/Rounds';
 import { randomSort } from '../../utils/utils';
 import { imagesData } from './imagesData';
+import Modal from '../../ui/Modal/Modal';
+
+const sortedCards = randomSort(imagesData);
 
 const Game = () => {
   const [cards, setCards] = useState([]);
   const [prevCardValue, setPrevCardValue] = useState('');
   const [rounds, setRounds] = useState(1);
   const [matches, setMatches] = useState(0);
+  const nodeRef = useRef(null);
 
   useEffect(() => {
-    setCards(randomSort(imagesData));
+    setCards(sortedCards);
   }, []);
 
   const setIsOpenToFalse = (prevValue, currentValue) => {
@@ -51,10 +56,28 @@ const Game = () => {
     setPrevCardValue('');
     setTimeout(() => setRounds(rounds + 1), 1000);
   };
+
+  const restartGame = () => {
+    setMatches(0);
+    setCards(randomSort(sortedCards));
+    setRounds(1);
+  };
+
   return (
     <div>
       <Rounds rounds={rounds} />
       <Board cards={cards} onClick={handleClick} />
+      <CSSTransition
+        in={matches === 1}
+        timeout={300}
+        classNames="animate"
+        unmountOnExit
+        nodeRef={nodeRef}
+      >
+        <div ref={nodeRef}>
+          <Modal onClick={restartGame} />
+        </div>
+      </CSSTransition>
     </div>
   );
 };
