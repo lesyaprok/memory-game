@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
+import { CSSTransition } from 'react-transition-group';
 import Board from '../Board/Board';
 import Rounds from '../Rounds/Rounds';
 import { randomSort } from '../../utils/utils';
@@ -12,6 +13,7 @@ const Game = () => {
   const [prevCardValue, setPrevCardValue] = useState('');
   const [rounds, setRounds] = useState(1);
   const [matches, setMatches] = useState(0);
+  const nodeRef = useRef(null);
 
   useEffect(() => {
     setCards(sortedCards);
@@ -65,7 +67,17 @@ const Game = () => {
     <div>
       <Rounds rounds={rounds} />
       <Board cards={cards} onClick={handleClick} />
-      {matches === 8 && <Modal onClick={restartGame} />}
+      <CSSTransition
+        in={matches === 1}
+        timeout={300}
+        classNames="animate"
+        unmountOnExit
+        nodeRef={nodeRef}
+      >
+        <div ref={nodeRef}>
+          <Modal onClick={restartGame} />
+        </div>
+      </CSSTransition>
     </div>
   );
 };
