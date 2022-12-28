@@ -1,3 +1,6 @@
+# Project gh-pages link
+[https://lesyaprok.github.io/memory-game/](https://lesyaprok.github.io/memory-game/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
