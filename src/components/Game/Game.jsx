@@ -36,7 +36,7 @@ const Game = () => {
       );
     }
     setPrevCardValue('');
-    setTimeout(() => setRounds(rounds + 1), 1000);
+    if (matches < 7) setTimeout(() => setRounds(rounds + 1), 1000);
   };
 
   const restartGame = () => {
@@ -51,7 +51,7 @@ const Game = () => {
       <Board cards={state} onClick={handleClick} />
       <CSSTransition
         in={matches === 8}
-        timeout={300}
+        timeout={1000}
         classNames="animate"
         unmountOnExit
         nodeRef={nodeRef}

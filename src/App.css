@@ -4,7 +4,7 @@
 
 .animate-enter-active {
   opacity: 1;
-  transition: opacity 600ms;
+  transition: opacity 1500ms;
 }
 
 .animate-exit {
