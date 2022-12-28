@@ -50,7 +50,7 @@ const Game = () => {
       <Rounds rounds={rounds} />
       <Board cards={state} onClick={handleClick} />
       <CSSTransition
-        in={matches === 1}
+        in={matches === 8}
         timeout={300}
         classNames="animate"
         unmountOnExit
