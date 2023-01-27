@@ -18,7 +18,8 @@
 
 .back {
   @apply absolute top-0 w-full h-full;
-  background: url("../../images/cover.jpeg");
+  background: url("../../images/cover6.jpeg");
+  background-size: cover;
   background-position: center;
   visibility: visible;
   transition: all 0.2s ease-in-out 0s;

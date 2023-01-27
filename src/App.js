@@ -4,7 +4,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="bg-slate-800">
+    <div className="bg-gradient-to-t from-orange-400 to-sky-400">
       <div className="flex justify-center items-center min-h-screen">
         <Game />
       </div>
