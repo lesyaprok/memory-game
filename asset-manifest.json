@@ -1,10 +1,14 @@
 {
   "files": {
-    "main.css": "/memory-game/static/css/main.d8a9ddcc.css",
-    "main.js": "/memory-game/static/js/main.79d67cef.js",
+    "main.css": "/memory-game/static/css/main.6ce27926.css",
+    "main.js": "/memory-game/static/js/main.ff1a4bbf.js",
+    "static/media/cover5.jpg": "/memory-game/static/media/cover5.77d71355e9411d6daf09.jpg",
+    "static/media/cover3.jpg": "/memory-game/static/media/cover3.c6664058e68770c2069e.jpg",
     "static/media/owl.png": "/memory-game/static/media/owl.4d8a33f1de6f6f0ff9d5.png",
+    "static/media/cover33.jpg": "/memory-game/static/media/cover33.81ad2764d0659bcfe9a9.jpg",
     "static/media/rabbit.png": "/memory-game/static/media/rabbit.10188f3b22df50879258.png",
     "static/media/dog.png": "/memory-game/static/media/dog.206fbe69f5fddaf60337.png",
+    "static/media/cover.png": "/memory-game/static/media/cover.5a273f5ff7b2bc967449.png",
     "static/media/elephant.png": "/memory-game/static/media/elephant.5eafd9a499f415bf9ff3.png",
     "static/media/panda.png": "/memory-game/static/media/panda.8784b21ec68d4969585c.png",
     "static/media/cat.png": "/memory-game/static/media/cat.433c0f078696ae12aaf3.png",
@@ -12,11 +16,11 @@
     "static/media/giraffe.png": "/memory-game/static/media/giraffe.3b94a2250cdd762902eb.png",
     "static/media/frog.png": "/memory-game/static/media/frog.a0bd15485bac78f3562f.png",
     "index.html": "/memory-game/index.html",
-    "main.d8a9ddcc.css.map": "/memory-game/static/css/main.d8a9ddcc.css.map",
-    "main.79d67cef.js.map": "/memory-game/static/js/main.79d67cef.js.map"
+    "main.6ce27926.css.map": "/memory-game/static/css/main.6ce27926.css.map",
+    "main.ff1a4bbf.js.map": "/memory-game/static/js/main.ff1a4bbf.js.map"
   },
   "entrypoints": [
-    "static/css/main.d8a9ddcc.css",
-    "static/js/main.79d67cef.js"
+    "static/css/main.6ce27926.css",
+    "static/js/main.ff1a4bbf.js"
   ]
 }
